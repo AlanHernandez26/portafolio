@@ -1,0 +1,135 @@
+/* Variables para colores */
+:root {
+    --primary-color: #2e3d49; /* Azul oscuro/gris oscuro para fondo de sidebar y títulos */
+    --secondary-color: #87cefa; /* Azul claro para acentos */
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+.cv-container {
+    display: flex; /* Habilita el layout de dos columnas */
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: var(--white);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Sombra suave para un efecto elevado */
+    border-radius: 8px;
+    overflow: hidden; /* Para contener bien el sidebar */
+}
+
+/* --- Columna Izquierda (Sidebar) --- */
+.sidebar {
+    width: 30%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 20px;
+}
+
+.sidebar h1 {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.sidebar > p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+    display: block;
+    margin: 20px auto 30px;
+}
+
+.sidebar-title {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    border-bottom: 1px solid #4a5a6a;
+    padding-bottom: 5px;
+    margin: 30px 0 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.sidebar p {
+    font-size: 0.9em;
+}
+
+/* --- Columna Derecha (Contenido Principal) --- */
+.main-content {
+    width: 70%;
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.profile p {
+    text-align: justify;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3, .education-item h3 {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin-bottom: 2px;
+}
+
+.experience-item p, .education-item p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+/* Responsividad básica para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column; /* Apila las columnas en pantallas pequeñas */
+        margin: 20px;
+    }
+
+    .sidebar, .main-content {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 20px;
+    }
+}
