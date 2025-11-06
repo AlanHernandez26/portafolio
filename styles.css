@@ -54,7 +54,7 @@ body {
     border-radius: 50%;
     border: 3px solid var(--secondary-color);
     display: block;
-    margin: 20px auto 30px;
+    margin: 50px auto 30px;
 }
 
 .sidebar-title {
